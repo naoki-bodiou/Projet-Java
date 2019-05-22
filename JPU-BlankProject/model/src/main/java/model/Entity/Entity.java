@@ -1,5 +1,9 @@
 package model.Entity;
-
+/**
+ * 
+ * @author Naoki
+ *
+ */
 public abstract class Entity 
 {
 	public boolean isMobile;
