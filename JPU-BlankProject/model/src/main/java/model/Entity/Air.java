@@ -19,6 +19,7 @@ public class Air extends Entity
 		this.canBeDestroyed = true;
 		this.isMobile = false;
 		this.canBePushed = false;
+		this.spritePath = "/main/resources/air.png";
 		
 		this.posX = x;
 		this.posY = y;

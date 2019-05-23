@@ -21,6 +21,7 @@ public class Exit extends Entity
 		this.canBeDestroyed = true;
 		this.isMobile = false;
 		this.canBePushed = false;
+		this.spritePath = "/main/resources/Exit.png";
 		this.isVisible = false;
 		
 		this.posX = x;

@@ -19,6 +19,7 @@ public class Wall extends Entity
 		this.canBeDestroyed = false;
 		this.isMobile = false;
 		this.canBePushed = false;
+		this.spritePath = "/main/resources/Wall.png";
 		
 		this.posX = x;
 		this.posY = y;

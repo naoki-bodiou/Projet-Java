@@ -5,14 +5,14 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import entity.HelloWorld;
+import entity.Line;
 
 /**
  * The Class DAOHelloWorld.
  *
  * @author Jean-Aymeric Diet
  */
-class DAOHelloWorld extends DAOEntity<HelloWorld> {
+class DAOLine extends DAOEntity<Line> {
 
 	/**
 	 * Instantiates a new DAO hello world.
@@ -22,7 +22,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 * @throws SQLException
 	 *           the SQL exception
 	 */
-	public DAOHelloWorld(final Connection connection) throws SQLException {
+	public DAOLine(final Connection connection) throws SQLException {
 		super(connection);
 	}
 
@@ -32,7 +32,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 * @see model.DAOEntity#create(model.Entity)
 	 */
 	@Override
-	public boolean create(final HelloWorld entity) {
+	public boolean create(final Line entity) {
 		// Not implemented
 		return false;
 	}
@@ -43,7 +43,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 * @see model.DAOEntity#delete(model.Entity)
 	 */
 	@Override
-	public boolean delete(final HelloWorld entity) {
+	public boolean delete(final Line entity) {
 		// Not implemented
 		return false;
 	}
@@ -54,7 +54,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 * @see model.DAOEntity#update(model.Entity)
 	 */
 	@Override
-	public boolean update(final HelloWorld entity) {
+	public boolean update(final Line entity) {
 		// Not implemented
 		return false;
 	}
@@ -65,44 +65,44 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 * @see model.DAOEntity#find(int)
 	 */
 	@Override
-	public HelloWorld find(final int id) {
-		HelloWorld helloWorld = new HelloWorld();
+	public Line find(final int id) {
+		Line line = new Line("");
 
 		try {
-			final String sql = "{call helloworldById(?)}";
+			final String sql = "{call getLineMap1(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
 			call.setInt(1, id);
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
-				helloWorld = new HelloWorld(id, resultSet.getString("code"), resultSet.getString("message"));
+				line = new Line(resultSet.getString("line1"));
 			}
-			return helloWorld;
+			return line;
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
+}
 
 	/*
 	 * (non-Javadoc)
 	 *
 	 * @see model.DAOEntity#find(java.lang.String)
-	 */
 	@Override
-	public HelloWorld find(final String code) {
-		HelloWorld helloWorld = new HelloWorld();
+	public Line find(final String code) {
+		Line line = new Line();
 
 		try {
-			final String sql = "{call helloworldByCode(?)}";
+			final String sql = "{call getLineMap1(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
 			call.setString(1, code);
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
-				helloWorld = new HelloWorld(resultSet.getInt("id"), code, resultSet.getString("message"));
+				line = new Line(resultSet.getString("line1"));
 			}
-			return helloWorld;
+			return line;
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
@@ -110,3 +110,4 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	}
 
 }
+*/

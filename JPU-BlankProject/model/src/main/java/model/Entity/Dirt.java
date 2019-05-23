@@ -19,6 +19,7 @@ public class Dirt extends Entity
 		this.canBeDestroyed = true;
 		this.isMobile = false;
 		this.canBePushed = false;
+		this.spritePath = "/main/resources/Dirt.png";
 		
 		this.posX = x;
 		this.posY = y;

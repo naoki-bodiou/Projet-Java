@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.Observable;
 
 import contract.IModel;
-import entity.HelloWorld;
+import entity.Line;
 
 /**
  * The Class Model.
@@ -14,13 +14,13 @@ import entity.HelloWorld;
 public final class Model extends Observable implements IModel {
 
 	/** The helloWorld. */
-	private HelloWorld helloWorld;
+	private Line line;
 
 	/**
 	 * Instantiates a new model.
 	 */
 	public Model() {
-		this.helloWorld = new HelloWorld();
+		this.line = new Line("");
 	}
 
 	/**
@@ -33,8 +33,8 @@ public final class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage()
 	 */
-	public HelloWorld getHelloWorld() {
-		return this.helloWorld;
+	public Line getLine() {
+		return this.line;
 	}
 
 	/**
@@ -43,8 +43,8 @@ public final class Model extends Observable implements IModel {
      * @param helloWorld
      *            the new hello world
      */
-	private void setHelloWorld(final HelloWorld helloWorld) {
-		this.helloWorld = helloWorld;
+	private void setLine(final Line line) {
+		this.line = line;
 		this.setChanged();
 		this.notifyObservers();
 	}
@@ -60,10 +60,10 @@ public final class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage(java.lang.String)
 	 */
-	public void loadHelloWorld(final String code) {
+	public void loadLine(final int id) {
 		try {
-			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setHelloWorld(daoHelloWorld.find(code));
+			final DAOLine daoLine = new DAOLine(DBConnection.getInstance().getConnection());
+			this.setLine(daoLine.find(id));
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}

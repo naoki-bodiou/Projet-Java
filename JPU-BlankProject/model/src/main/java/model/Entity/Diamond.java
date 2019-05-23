@@ -19,6 +19,7 @@ public class Diamond extends Entity
 		this.canBeDestroyed = true;
 		this.isMobile = false;
 		this.canBePushed = false;
+		this.spritePath = "/main/resources//diamond.png";
 		
 		this.posX = x;
 		this.posY = y;	

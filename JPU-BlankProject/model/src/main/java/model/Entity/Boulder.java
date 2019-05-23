@@ -19,6 +19,7 @@ public class Boulder extends Entity
 		this.canBeDestroyed = false;
 		this.isMobile = false;
 		this.canBePushed = false;
+		this.spritePath = "/main/resources/boulder.png";
 		
 		this.posX = x;
 		this.posY = y;		
