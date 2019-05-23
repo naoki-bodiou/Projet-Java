@@ -1,10 +1,5 @@
 package entity;
 
-/**
- * The Class HelloWorld.
- *
- * @author Jean-Aymeric Diet
- */
 public class Line extends Entity 
 {
 
@@ -16,11 +11,13 @@ public class Line extends Entity
 		this.setLine(line);
 	}
 
-	public String getLine() {
+	public String getLine() 
+	{
 		return line;
 	}
 
-	public void setLine(String line) {
+	public void setLine(String line) 
+	{
 		this.line = line;
 	}
 }

@@ -14,13 +14,13 @@ import entity.Line;
 public final class Model extends Observable implements IModel {
 
 	/** The helloWorld. */
-	private Line line;
+	private String[] TabLine;
+	private String line;
 
 	/**
 	 * Instantiates a new model.
 	 */
 	public Model() {
-		this.line = new Line("");
 	}
 
 	/**
@@ -33,8 +33,8 @@ public final class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage()
 	 */
-	public Line getLine() {
-		return this.line;
+	public String getTabLine(int i) {
+		return TabLine[i];
 	}
 
 	/**
@@ -43,8 +43,8 @@ public final class Model extends Observable implements IModel {
      * @param helloWorld
      *            the new hello world
      */
-	private void setLine(final Line line) {
-		this.line = line;
+	private void setTabLine(final String line, int i) {
+		this.TabLine[i] = line;
 		this.setChanged();
 		this.notifyObservers();
 	}
@@ -60,10 +60,13 @@ public final class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage(java.lang.String)
 	 */
-	public void loadLine(final int id) {
+	public void loadMap() {
 		try {
 			final DAOLine daoLine = new DAOLine(DBConnection.getInstance().getConnection());
-			this.setLine(daoLine.find(id));
+			for(int i = 0; i < 22; i++) {
+				line = daoLine.find(i + 1);
+			this.setTabLine(line, i);
+			}
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}

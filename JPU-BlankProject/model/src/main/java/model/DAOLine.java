@@ -65,8 +65,9 @@ class DAOLine extends DAOEntity<Line> {
 	 * @see model.DAOEntity#find(int)
 	 */
 	@Override
-	public Line find(final int id) {
-		Line line = new Line("");
+	public String find(final int id) {
+		String line = "";
+
 
 		try {
 			final String sql = "{call getLineMap1(?)}";
@@ -75,7 +76,7 @@ class DAOLine extends DAOEntity<Line> {
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
-				line = new Line(resultSet.getString("line1"));
+				line = resultSet.getString("line1");
 			}
 			return line;
 		} catch (final SQLException e) {

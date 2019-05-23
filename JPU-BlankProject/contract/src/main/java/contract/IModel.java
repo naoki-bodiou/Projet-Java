@@ -16,7 +16,7 @@ public interface IModel {
 	 *
 	 * @return the helloworld entity
 	 */
-	Line getLine();
+String getTabLine(int i);
 
 	/**
 	 * Load the message.
@@ -24,7 +24,7 @@ public interface IModel {
 	 * @param code
 	 *          the code
 	 */
-	void loadLine(int id);
+	void loadMap();
 
 	/**
 	 * Gets the observable.

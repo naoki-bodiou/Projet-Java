@@ -75,9 +75,9 @@ public final class Controller implements IController {
 	public void orderPerform(final ControllerOrder controllerOrder) {
 		switch (controllerOrder) {
 			case Up:
-				this.model.loadLine(1);
+				this.model.loadMap();
 				break;
-			case Right:
+			/*case Right:
 				this.model.loadLine(2);
 				break;
 			case Left:
@@ -85,7 +85,7 @@ public final class Controller implements IController {
 				break;
 			case Down:
 				this.model.loadLine(4);
-				break;
+				break;*/
 			default:
 				break;
 		}

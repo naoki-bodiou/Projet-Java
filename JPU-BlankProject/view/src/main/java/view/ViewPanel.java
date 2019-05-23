@@ -63,8 +63,12 @@ class ViewPanel extends JPanel implements Observer {
 	 * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
 	 */
 	@Override
-	protected void paintComponent(final Graphics graphics) {
+	protected void paintComponent(final Graphics graphics) 
+	{
 		graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
-		graphics.drawString(this.getViewFrame().getModel().getLine().getLine(), 10, 20);
+		for(int i = 0; i <= 22; i++) 
+		{
+		graphics.drawString(this.getViewFrame().getModel().getTabLine(i), 10, 20);
+		}
 	}
 }
