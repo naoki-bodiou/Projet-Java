@@ -5,22 +5,23 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class Dirt extends Entity{
+public class Character extends Entity{
 	
 	/**
-	 * Constructor of the Dirt class initializes the parameters of the Dirt.
+	 * Constructor of the Diamond class initializes the parameters of the Diamond.
 	 * 
 	 *  @param X 
 	 *  	Used to initializes the position X
 	 *  @param Y
 	 *  	Used to initializes the position Y
 	 */
-	public Dirt(int X, int Y) {
-		this.isMovable = false;
+	
+	public Character(int X, int Y) {
+		this.isMovable = true;
 		this.canBeDestroyed = true;
 		this.canBePushed = false;
 		try {
-			this.spritePath = ImageIO.read(new File("C:\\Users\\Naoki\\Desktop\\Projet JAVA CESI\\ressource\\dirt.png"));
+			this.spritePath = ImageIO.read(new File("C:\\Users\\Naoki\\Desktop\\Projet JAVA CESI\\ressource\\character.png"));
 			}catch(IOException e) {
 				e.printStackTrace();
 			}

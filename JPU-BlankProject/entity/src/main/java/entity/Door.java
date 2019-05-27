@@ -1,12 +1,11 @@
-package model.Entity;
+package entity;
 
 import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class Diamond extends Entity{
-	
+public class Door extends Entity{
 	/**
 	 * Constructor of the Diamond class initializes the parameters of the Diamond.
 	 * 
@@ -14,14 +13,18 @@ public class Diamond extends Entity{
 	 *  	Used to initializes the position X
 	 *  @param Y
 	 *  	Used to initializes the position Y
+	 *  define if the Door is movable or not
+	 *  define if the Door is destructible or not
+	 *  define if the Door can be pushed or not
+	 *  give the path to sprite of the Door
 	 */
 	
-	public Diamond(int X, int Y) {
-		this.isMovable = true;
+	public Door(int X, int Y) {
+		this.isMovable = false;
 		this.canBeDestroyed = true;
 		this.canBePushed = false;
 		try {
-			this.spritePath = ImageIO.read(new File("C:\\Users\\Naoki\\Desktop\\Projet JAVA CESI\\ressource\\diamond.png"));
+			this.spritePath = ImageIO.read(new File("C:\\Users\\Naoki\\Desktop\\Projet JAVA CESI\\ressource\\door.png"));
 			}catch(IOException e) {
 				e.printStackTrace();
 			}

@@ -1,4 +1,4 @@
-package model.Entity;
+package entity;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +14,10 @@ public class Dirt extends Entity{
 	 *  	Used to initializes the position X
 	 *  @param Y
 	 *  	Used to initializes the position Y
+	 *  define if the Dirt is movable or not
+	 *  define if the Dirt is destructible or not
+	 *  define if the Dirt can be pushed or not
+	 *  give the path to sprite of the Dirt
 	 */
 	public Dirt(int X, int Y) {
 		this.isMovable = false;

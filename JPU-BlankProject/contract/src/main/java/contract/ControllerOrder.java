@@ -8,13 +8,13 @@ package contract;
 public enum ControllerOrder {
 
 	/** Go up. */
-	Up,
+	map1,
 	/** Go down. */
-	Down,
+	map2,
 	/** Go left. */
-	Left,
+	map3,
 	/** Go right. */
-	Right,
+	map4,
 	/** No Movement. */
-	NoMove
+	map5,
 }

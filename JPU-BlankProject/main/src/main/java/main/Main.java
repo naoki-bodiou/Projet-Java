@@ -1,12 +1,13 @@
 /**
+
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
 package main;
 
-import contract.ControllerOrder;
 import controller.Controller;
 import model.Model;
+import model.Movement;
 import view.View;
 
 /**
@@ -25,10 +26,10 @@ public abstract class Main {
     public static void main(final String[] args) {
         final Model model = new Model();
         final View view = new View(model);
-        final Controller controller = new Controller(view, model);
+        final Movement movement = new Movement();
+        final Controller controller = new Controller(view, model, movement);
         view.setController(controller);
-
         controller.control();
-        controller.orderPerform(ControllerOrder.NoMove);
+        //controller.orderPerform(ControllerOrder.map1);
     }
 }

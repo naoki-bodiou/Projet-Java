@@ -1,4 +1,4 @@
-package model.Entity;
+package entity;
 
 import java.io.File;
 import java.io.IOException;

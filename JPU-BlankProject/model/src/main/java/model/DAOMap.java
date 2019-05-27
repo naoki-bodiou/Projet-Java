@@ -12,7 +12,7 @@ import entity.Line;
  *
  * @author Jean-Aymeric Diet
  */
-class DAOLine extends DAOEntity<Line>{
+class DAOMap extends DAOEntity<Line>{
 
 	/**
 	 * Instantiates a new DAO hello world.
@@ -22,7 +22,7 @@ class DAOLine extends DAOEntity<Line>{
 	 * @throws SQLException
 	 *           the SQL exception
 	 */
-	public DAOLine(final Connection connection) throws SQLException {
+	public DAOMap(final Connection connection) throws SQLException {
 		super(connection);
 	}
 
