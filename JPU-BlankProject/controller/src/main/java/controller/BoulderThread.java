@@ -30,8 +30,9 @@ public class BoulderThread extends Thread {
 	public void run() {
 
 		while (true) {
-			this.fall();
+ 
 			try {
+				this.fall();
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();

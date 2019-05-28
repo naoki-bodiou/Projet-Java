@@ -103,14 +103,18 @@ public final class Controller implements IController {
 		}
 		BoulderThread thread = new BoulderThread("thread", view, model, movement);
         thread.start();
+        System.out.println("status du thread " + thread.getState());
 	}
 
 	public void movement(int KeyCode) {
 		swap(model.getTabEntity(), model.getMap(), KeyCode);
 		if (model.getCharacter().getNbDiamond() == 10) {
-			Door door = new Door(model.getDoorX(), model.getDoorY());
-			model.setTabEntity(model.getDoorX(), model.getDoorY(), door);
-			model.setMap(model.getDoorX(), model.getDoorY(), door.getSpritePath());
+			System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+			System.out.println(model.getDoorX());
+			System.out.println(model.getDoorY());
+			Door door = new Door(model.getDoorY(), model.getDoorX());
+			model.setTabEntity(model.getDoorY(), model.getDoorX(), door);
+			model.setMap(model.getDoorY(), model.getDoorX(), door.getSpritePath());
 		}
 	}
 
