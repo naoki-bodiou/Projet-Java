@@ -19,6 +19,10 @@ public abstract class Entity {
 
 	/* The Boolean canbedestroyed */
 
+	public void setCanBePushed(boolean canBePushed) {
+		this.canBePushed = canBePushed;
+	}
+
 	public boolean canBeDestroyed;
 
 	/** Horizontal position of the Entity */
@@ -31,6 +35,16 @@ public abstract class Entity {
 	/** Load of the sprite */
 
 	protected Image spritePath;
+	
+	protected Boolean falling;
+
+	public Boolean getFalling() {
+		return falling;
+	}
+
+	public void setFalling(Boolean falling) {
+		this.falling = falling;
+	}
 
 	/**
 	 * 

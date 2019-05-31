@@ -1,6 +1,5 @@
 package entity;
 
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -24,7 +23,7 @@ public class Door extends Entity{
 		this.canBeDestroyed = true;
 		this.canBePushed = false;
 		try {
-			this.spritePath = ImageIO.read(new File("C:\\Users\\Naoki\\Desktop\\Projet JAVA CESI\\ressource\\door.png"));
+			this.spritePath = ImageIO.read(getClass().getResource("/SpriteEntity/exit.png"));
 			}catch(IOException e) {
 				e.printStackTrace();
 			}

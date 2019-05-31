@@ -1,6 +1,5 @@
 package entity;
 
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -24,7 +23,7 @@ public class Dirt extends Entity{
 		this.canBeDestroyed = true;
 		this.canBePushed = false;
 		try {
-			this.spritePath = ImageIO.read(new File("C:\\Users\\Naoki\\Desktop\\Projet JAVA CESI\\ressource\\dirt.png"));
+			this.spritePath = ImageIO.read(getClass().getResource("/SpriteEntity/dirt.png"));
 			}catch(IOException e) {
 				e.printStackTrace();
 			}

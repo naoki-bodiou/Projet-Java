@@ -1,7 +1,5 @@
 package entity;
 
-import java.awt.Image;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -24,7 +22,7 @@ public class Wall extends Entity{
 		this.canBeDestroyed = false;
 		this.canBePushed = false;
 		try {
-			spritePath = ImageIO.read(new File("C:\\Users\\Naoki\\Desktop\\Projet JAVA CESI\\ressource\\wall.png"));
+			spritePath = ImageIO.read(getClass().getResource("/SpriteEntity/wall.png"));
 			}catch(IOException e) {
 				e.printStackTrace();
 			}

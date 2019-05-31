@@ -1,6 +1,5 @@
 package entity;
 
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -25,7 +24,7 @@ public class Diamond extends Entity{
 		this.canBeDestroyed = true;
 		this.canBePushed = false;
 		try {
-			this.spritePath = ImageIO.read(new File("C:\\Users\\Naoki\\Desktop\\Projet JAVA CESI\\ressource\\diamond.png"));
+			this.spritePath = ImageIO.read(getClass().getResource("/SpriteEntity/diamond.png"));
 			}catch(IOException e) {
 				e.printStackTrace();
 			}

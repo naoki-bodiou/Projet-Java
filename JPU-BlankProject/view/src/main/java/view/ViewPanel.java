@@ -73,20 +73,19 @@ class ViewPanel extends JPanel implements Observer {
 		if(this.getViewFrame().getModel().getTabLine(0,0) == null) {
 			viewFrame.setTitle("MENU");
 			try {
-			      Image img = ImageIO.read(new File("C:\\Users\\Naoki\\Desktop\\Projet JAVA CESI\\ressource\\menu.png"));
+			      Image img = ImageIO.read(getClass().getResource("/images/menu.png"));
 			      graphics.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
 			    } catch (IOException e) {
 			      e.printStackTrace();
 			    }
 		}else {
-			viewFrame.setTitle("Level " + this.getViewFrame().getModel().getLevel() + "                   Number of diamond(s) : "+this.getViewFrame().getModel().getCharacter().getNbDiamond());
+			viewFrame.setTitle("Level " + this.getViewFrame().getModel().getLevel() + "                     Number of diamond(s) : "+this.getViewFrame().getModel().getCharacter().getNbDiamond());
 			graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
-			graphics.drawString(Integer.toString(this.getViewFrame().getModel().getCharacter().getNbDiamond()), 1400, 80);
 			for(int i = 0; i < 22; i++) {
 				for(int j = 0; j < 40; j++) {
-					graphics.drawImage(this.getViewFrame().getModel().getMap(i, j), (j*34), Y, this);
+					graphics.drawImage(this.getViewFrame().getModel().getMap(i, j), (j*32), Y, this);
 				}
-				Y += 34;
+				Y += 32;
 			}
 		}
 	}

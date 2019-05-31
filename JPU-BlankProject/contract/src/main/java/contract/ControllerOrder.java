@@ -3,18 +3,18 @@ package contract;
 /**
  * The Enum ControllerOrder.
  *
- * @author Basile Boulanger
+ * @author rodri
  */
 public enum ControllerOrder {
 
-	/** Go up. */
+	/** The First Map */
 	map1,
-	/** Go down. */
+	/** The Second Map */
 	map2,
-	/** Go left. */
+	/** The Third Map */
 	map3,
-	/** Go right. */
+	/** The Fourth Map */
 	map4,
-	/** No Movement. */
+	/** The Fifth Map */
 	map5,
 }

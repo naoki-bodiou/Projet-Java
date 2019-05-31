@@ -72,6 +72,11 @@ public final class View implements IView, Runnable {
 	public void run() {
 		this.viewFrame.setVisible(true);
 	}
+	
+	public void close() {
+		this.viewFrame.dispose();
+		System.exit(0);
+	}
 
 	/**
 	 * Sets the controller.

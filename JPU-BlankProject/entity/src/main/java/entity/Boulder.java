@@ -1,6 +1,5 @@
 package entity;
 
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -30,9 +29,9 @@ public class Boulder extends Entity{
 	public Boulder(int X, int Y) {
 		this.isMovable = true;
 		this.canBeDestroyed = false;
-		this.canBePushed = true;
+		this.canBePushed = false;
 		try {
-		this.spritePath = ImageIO.read(new File("C:\\Users\\Naoki\\Desktop\\Projet JAVA CESI\\ressource\\boulder.png"));
+		this.spritePath = ImageIO.read(getClass().getResource("/SpriteEntity/rock.png"));
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
