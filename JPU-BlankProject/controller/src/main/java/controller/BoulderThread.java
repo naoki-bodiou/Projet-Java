@@ -110,7 +110,7 @@ public class BoulderThread extends Thread {
 	public void fall() {
 		tabBoulder = definition();
 		int j = 0;
-		for (j = 0; j < 100; j++) {
+		for (j = 0; j < 210; j++) {
 			if (tabEntity[tabBoulder[1][j] + 1][tabBoulder[0][j]] instanceof Air
 					|| tabEntity[tabBoulder[1][j] + 1][tabBoulder[0][j]] instanceof Character) {
 				if (tabEntity[tabBoulder[1][j] + 1][tabBoulder[0][j]] instanceof Air) {
