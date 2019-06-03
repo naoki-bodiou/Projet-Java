@@ -23,7 +23,6 @@ public class Boulder extends Entity{
 	 *  	Used to initializes the position Y
 	 */
 	public Boulder(int X, int Y) {
-		//this.isMovable = true;
 		this.canBeDestroyed = false;
 		this.canBePushed = false;
 		try {

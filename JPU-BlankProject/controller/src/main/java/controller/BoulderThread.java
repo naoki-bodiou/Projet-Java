@@ -12,7 +12,7 @@ import entity.Character;
 
 	/**
 	 * 
-	 * @author Naoki & Basile
+	 * @author Naoki, Basile
 	 *
 	 */
 

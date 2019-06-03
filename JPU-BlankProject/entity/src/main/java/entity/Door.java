@@ -16,7 +16,6 @@ public class Door extends Entity{
 	 */
 	
 	public Door(int X, int Y) {
-		this.isMovable = false;
 		this.canBeDestroyed = true;
 		this.canBePushed = false;
 		try {

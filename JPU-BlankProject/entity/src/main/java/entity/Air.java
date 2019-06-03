@@ -16,7 +16,6 @@ public class Air extends Entity{
 
 	 */
 	public Air(int X, int Y) {
-		//this.isMovable = false;
 		this.canBeDestroyed = true;
 		this.canBePushed = true;
 		try {

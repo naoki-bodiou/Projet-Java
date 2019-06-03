@@ -9,10 +9,6 @@ import java.awt.Image;
  */
 public abstract class Entity {
 
-	/** The Boolean ismovable */
-
-	public boolean isMovable;
-
 	/** The Boolean canbepushed */
 
 	public boolean canBePushed;

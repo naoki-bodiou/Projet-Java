@@ -19,6 +19,7 @@ public class Character extends Entity{
 	/**
 	 * 
 	 * @param nbDiamond
+	 * 			The number of diamonds
 	 */
 	
 	public void setNbDiamond(int nbDiamond) {

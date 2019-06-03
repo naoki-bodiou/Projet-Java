@@ -16,7 +16,6 @@ public class Dirt extends Entity{
 
 	 */
 	public Dirt(int X, int Y) {
-		this.isMovable = false;
 		this.canBeDestroyed = true;
 		this.canBePushed = false;
 		try {

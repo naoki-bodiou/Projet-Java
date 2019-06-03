@@ -14,7 +14,7 @@ import entity.Entity;
 
 /**
  * The Class Controller.
- * @author Naoki, Simon & Basile
+ * @author Naoki, Simon, Basile
  */
 public final class Controller implements IController {
 

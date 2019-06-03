@@ -17,7 +17,6 @@ public class Diamond extends Entity{
 	 */
 	
 	public Diamond(int X, int Y) {
-		this.isMovable = true;
 		this.canBeDestroyed = true;
 		this.canBePushed = false;
 		try {
