@@ -198,7 +198,7 @@ public final class Controller implements IController {
 					view.printMessage("You have finished our Game, Congratulations Pay $99 to get another map");
 					view.close();
 				} else {
-					view.printMessage("You won the level " + level + ", continue if you have the balls");
+					view.printMessage("You won the level " + (level-1));
 					model.loadMap(model.getLevel() + 1);
 				}
 			}
