@@ -193,12 +193,12 @@ public final class Controller implements IController {
 				model.setPosX(-1);
 			}
 			if (y == model.getDoorY() && x == model.getDoorX()) {
-				int level = model.getLevel() + 1;
+				int level = model.getLevel();
 				if (level == 6) {
-					view.printMessage("You have finished our Game, Congratulations Pay $99 to get another map");
+					view.printMessage("Go buy the DLC <3");
 					view.close();
 				} else {
-					view.printMessage("You won the level " + (level-1));
+					view.printMessage("You won the level " + level);
 					model.loadMap(model.getLevel() + 1);
 				}
 			}
@@ -218,12 +218,12 @@ public final class Controller implements IController {
 				model.setPosX(1);
 			}
 			if (y == model.getDoorY() && x == model.getDoorX()) {
-				int level = model.getLevel() + 1;
+				int level = model.getLevel();
 				if (level == 6) {
-					view.printMessage("You have finished our Game, Congratulations Pay $99 to get another map");
+					view.printMessage("Go buy the DLC <3");
 					view.close();
 				} else {
-					view.printMessage("You won the level " + level + ", continue if you have the balls");
+					view.printMessage("You won the level " + level);
 					model.loadMap(model.getLevel() + 1);
 				}
 			}
@@ -254,12 +254,12 @@ public final class Controller implements IController {
 				model.setPosY(1);
 			}
 			if (y == model.getDoorY() && x == model.getDoorX()) {
-				int level = model.getLevel() + 1;
+				int level = model.getLevel();
 				if (level == 6) {
-					view.printMessage("You have finished our Game, Congratulations Pay $99 to get another map");
+					view.printMessage("Go buy the DLC <3");
 					view.close();
 				} else {
-					view.printMessage("You won the level " + level + ", continue if you have the balls");
+					view.printMessage("You won the level " + level);
 					model.loadMap(model.getLevel() + 1);
 				}
 			}
@@ -290,12 +290,12 @@ public final class Controller implements IController {
 				model.setPosY(-1);
 			}
 			if (y == model.getDoorY() && x == model.getDoorX()) {
-				int level = model.getLevel() + 1;
+				int level = model.getLevel();
 				if (level == 6) {
-					view.printMessage("You have finished our Game, Congratulations Pay $99 to get another map");
+					view.printMessage("Go buy the DLC <3");
 					view.close();
 				} else {
-					view.printMessage("You won the level " + level + ", continue if you have the balls");
+					view.printMessage("You won the level " + level);
 					model.loadMap(model.getLevel() + 1);
 				}
 			}
