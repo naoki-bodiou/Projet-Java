@@ -26,45 +26,7 @@ class DAOMap extends DAOEntity<Line>{
 		super(connection);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see model.DAOEntity#create(model.Entity)
-	 */
-	/*@Override
-	public boolean create(final Line entity) {
-		// Not implemented
-		return false;
-	}
-*/
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see model.DAOEntity#delete(model.Entity)
-	 */
-	
-	/*@Override
-	public boolean delete(final Line entity) {
-		// Not implemented
-		return false;
-	}*/
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see model.DAOEntity#update(model.Entity)
-	 */
-	/*@Override
-	public boolean update(final Line entity) {
-		// Not implemented
-		return false;
-	}*/
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see model.DAOEntity#find(int)
-	 */
 	public String find(int id, int map) {
 		String line = " ";
 		String name = "line" + map;	

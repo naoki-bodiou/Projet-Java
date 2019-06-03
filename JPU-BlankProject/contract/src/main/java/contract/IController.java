@@ -25,7 +25,7 @@ public interface IController {
 	
 	public void orderPerform(ControllerOrder controllerOrder);
 	
-	public void swap(Entity[][] tabEntity, Image[][] tabImage, int i);
+	//public void swap(Entity[][] tabEntity, Image[][] tabImage, int i);
 	
 	/**
 	 * Initiate the movement and create the exit door

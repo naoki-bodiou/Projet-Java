@@ -1,5 +1,5 @@
 package entity;
 
-public class Line extends Entity2 {
+public class Line extends Entity {
 
 }

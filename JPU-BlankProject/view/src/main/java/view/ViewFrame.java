@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 import contract.IController;
 import contract.IModel;
-import entity.Entity2;
+import entity.Entity;
 
 /**
  * The Class ViewFrame.
@@ -17,7 +17,7 @@ import entity.Entity2;
  */
 class ViewFrame extends JFrame implements KeyListener {
 
-	Entity2 entity;
+	Entity entity;
 	/** The model. */
 	private IModel model;
 

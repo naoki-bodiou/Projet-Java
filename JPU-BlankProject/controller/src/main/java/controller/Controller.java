@@ -22,7 +22,9 @@ public final class Controller implements IController {
 
 	/** The model. */
 	private IModel model;
-
+/**
+ * instantiate the new array list with all the threads
+ */
 	ArrayList<Thread> threadList = new ArrayList<Thread>();
 
 	/**
@@ -69,7 +71,9 @@ public final class Controller implements IController {
 	public IModel getModel() {
 		return this.model;
 	}
-
+/**
+ * Check if the thread is already launched. If not launched, it launch it.
+ */
 	private void threadCreation() {
 		if (threadList.isEmpty()) {
 			BoulderThread thread = new BoulderThread("thread", view, model);
@@ -123,11 +127,23 @@ public final class Controller implements IController {
 			model.setMap(model.getDoorY(), model.getDoorX(), door.getSpritePath());
 		}
 	}
-
+/**
+ * 
+ * @param entity
+ * 		The entity
+ * @return
+ * 		return entity.getcanbedestroyed
+ */
 	private Boolean check(Entity entity) {
 		return entity.getCanBeDestroyed();
 	}
-
+/**
+ * 
+ * @param entity
+ * 		The entity
+ * @return
+ * 		Check if there is a Diamond
+ */
 	private Boolean checkDiamond(Entity entity) {
 		if (entity instanceof Diamond) {
 			return true;
@@ -135,12 +151,26 @@ public final class Controller implements IController {
 			return false;
 		}
 	}
-
+/**
+ * 
+ * @param entity
+ * 		The entity
+ * @return
+ * 		Check if the entity can be pushed
+ */
 	private Boolean checkPushed(Entity entity) {
 
 		return entity.getCanBePushed();
 	}
-
+/**
+ * Intervert the player's position with the position of the entity where he wants to go to generate movement.
+ * @param tabEntity
+ * 		An array of entity
+ * @param tabImage
+ * 		An array of sprite
+ * @param i
+ * 		Get the keycode of the key
+ */
 	public void swap(Entity[][] tabEntity, Image[][] tabImage, int i) {
 		Entity entity;
 		Image image;
