@@ -194,7 +194,7 @@ public final class Controller implements IController {
 			}
 			if (y == model.getDoorY() && x == model.getDoorX()) {
 				int level = model.getLevel();
-				if (level == 6) {
+				if (level == 5) {
 					view.printMessage("Go buy the DLC <3");
 					view.close();
 				} else {
@@ -219,7 +219,7 @@ public final class Controller implements IController {
 			}
 			if (y == model.getDoorY() && x == model.getDoorX()) {
 				int level = model.getLevel();
-				if (level == 6) {
+				if (level == 5) {
 					view.printMessage("Go buy the DLC <3");
 					view.close();
 				} else {
@@ -255,7 +255,7 @@ public final class Controller implements IController {
 			}
 			if (y == model.getDoorY() && x == model.getDoorX()) {
 				int level = model.getLevel();
-				if (level == 6) {
+				if (level == 5) {
 					view.printMessage("Go buy the DLC <3");
 					view.close();
 				} else {
@@ -291,7 +291,7 @@ public final class Controller implements IController {
 			}
 			if (y == model.getDoorY() && x == model.getDoorX()) {
 				int level = model.getLevel();
-				if (level == 6) {
+				if (level == 5) {
 					view.printMessage("Go buy the DLC <3");
 					view.close();
 				} else {
