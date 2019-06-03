@@ -1,6 +1,6 @@
 /**
 
- * @author rodri
+ * @author Naoki
  * @version 3.0
  */
 package main;
