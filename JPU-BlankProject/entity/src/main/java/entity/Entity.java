@@ -4,7 +4,7 @@ import java.awt.Image;
 
 /**
  * 
- * * @author rodri
+ * * @author Naoki
  *
  */
 public abstract class Entity {

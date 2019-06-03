@@ -10,6 +10,12 @@ import entity.Diamond;
 import entity.Entity;
 import entity.Character;
 
+	/**
+	 * 
+	 * @author Naoki & Basile
+	 *
+	 */
+
 public class BoulderThread extends Thread {
 	/** The View */
 	IView view;

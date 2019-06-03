@@ -7,7 +7,7 @@ import entity.Entity;
 /**
  * The Interface IController.
  *
- * @author rodri
+ * @author Naoki
  */
 public interface IController {
 
